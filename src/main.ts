@@ -11,10 +11,9 @@ async function bootstrap() {
   });
 
   app.useStaticAssets(join(__dirname, '../public'));
+  app.useStaticAssets(join(__dirname, '../node_modules/bootstrap/dist'), { prefix: '/bootstrap' });
   app.setBaseViewsDir(join(__dirname, '../template'));
   app.setViewEngine('hbs');
-
-  app.use('/bootstrap', express.static(join(__dirname, '../node_modules/bootstrap/dist')));
 
   await app.listen(3000);
 }
