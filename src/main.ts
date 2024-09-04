@@ -12,6 +12,7 @@ async function bootstrap() {
 
   app.useStaticAssets(join(__dirname, '../public'));
   app.useStaticAssets(join(__dirname, '../node_modules/bootstrap/dist'), { prefix: '/bootstrap' });
+  app.useStaticAssets(join(__dirname, '../node_modules/htmx/'), { prefix: '/htmx' });
   app.setBaseViewsDir(join(__dirname, '../template'));
   app.setViewEngine('hbs');
 
