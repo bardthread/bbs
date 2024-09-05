@@ -1,0 +1,9 @@
+{{#> base}}
+  {{#*inline "title"}}
+    Welcome to NestJS
+  {{/inline}}
+  {{#*inline "body"}}
+    <a href="/templates/new-content.hbs">test</a>
+    <button hx-get="/templates/new-content.hbs" hx-trigger="click" hx-swap="outerHTML">更新</button>
+  {{/inline}}
+{{/base}}
